@@ -1,0 +1,21 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+.env/
+
+# Temp files
+*.log
+*.tmp
+
+# OS files
+.DS_Store
+
+# Flask
+instance/
+.webassets-cache
+
+# Secrets
+.env

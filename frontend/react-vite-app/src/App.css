@@ -1,0 +1,254 @@
+.app-container {
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Title */
+.title {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Preview */
+.preview-box {
+  margin: 2rem auto;
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 1/1;
+  border-radius: 16px;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.preview-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.upload-text {
+  color: #aaa;
+}
+
+/* Buttons */
+.options {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  
+}
+
+button {
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 500;
+
+}
+
+/* Buttons color */
+.options button:nth-child(3) {
+  background: #2b6df6;
+  color: white;
+}
+.options button:nth-child(4) {
+  background: #28a745;
+  color: white;
+}
+.options button:nth-child(5) {
+  background: #ff9800;
+  color: white;
+}
+
+/* Upload Modal */
+.upload-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* IMPORTANT FIX */
+.upload-box {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 320px;
+  text-align: center;
+  position: relative;
+}
+
+/* Only normal buttons full width */
+.upload-box button:not(.overlay-close) {
+  width: 100%;
+  margin: 0.5rem 0;
+  background: #2b6df6;
+  color: white;
+}
+
+/* Overlay */
+.fullscreen-overlay {
+  position: fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.85);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+
+.overlay-content {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+}
+
+.overlay-content img {
+  width: 100%;
+  max-height: 70vh;
+  border-radius: 12px;
+}
+
+.overlay-label {
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+/* 🔥 PERFECT X BUTTON (ALL PLACES) */
+.overlay-close {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border-radius: 50%;
+  border: none;
+
+  font-size: 16px;
+  cursor: pointer;
+
+  padding: 0;
+}
+
+/* History Sidebar */
+.history-sidebar {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 85%;
+  max-width: 320px;
+  height: 100%;
+  background: #000000;
+  padding: 1rem;
+  color: white;
+  overflow-y: auto;
+}
+
+/* Header fix */
+.sidebar-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: 45px;
+  position: relative;
+}
+
+/* X left side */
+.sidebar-header .overlay-close {
+  left: 0;
+  top: 0;
+}
+
+/* History Items */
+.history-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  background: rgba(255,255,255,0.2);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.history-item img {
+  width: 60px;
+  border-radius: 8px;
+}
+
+/* Clear Button */
+.clear-btn {
+  width: 100%;
+  margin-top: 1rem;
+  background: #00000099;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+
+.dark {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.light {
+  background: #ffffff;
+  color: #111111;
+}
+
+/* 👇 IMPORTANT: Title color change */
+.light .title {
+  color: #000000;
+}
+
+.dark .title {
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .title {
+    font-size: 1.5rem;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .overlay-close {
+    width: 32px;
+    height: 32px;
+    font-size: 14px;
+  }
+}
+
+
